@@ -1,0 +1,10 @@
+/node_modules
+.certbot
+.docker-compose.yml
+.nginx
+.letsencrypt
+.var
+commands.txt
+.README.md
+.gitignore
+.dist

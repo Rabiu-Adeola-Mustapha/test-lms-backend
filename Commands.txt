@@ -1,0 +1,10 @@
+sudo docker build -t mcanderson-api .
+# To Run .env file in container
+sudo docker run -d -p 5001:3000 --env-file .env <mcanderson-api>  
+docker images
+docker ps
+docker rm <container_id>
+docker stop <container_id>
+
+
+# To Register A Runner As a Service
