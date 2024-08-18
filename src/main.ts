@@ -25,6 +25,7 @@ async function bootstrap() {
   // Set up CORS using NestJS built-in method
   app.enableCors({
     origin: [
+      'https://lms-application-six.vercel.app',
       'https://d13915glct9pkw.cloudfront.net',
       'http://localhost:3000',
       'https://mivant-green.vercel.app',
