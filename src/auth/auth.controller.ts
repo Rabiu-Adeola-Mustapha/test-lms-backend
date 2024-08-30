@@ -81,7 +81,7 @@ export class AuthController {
   @UseGuards(GoogleAuthGuard)
   async googleAuth(@Req() _req) {}
 
-  @Get('google/redirect')
+  @Get('social/google/redirect')
   @UseGuards(GoogleAuthGuard)
   async googleAuthRedirect(@Req() req, @Res() res: Response) {
     const { user } = req;
@@ -89,9 +89,9 @@ export class AuthController {
     const token : String = await this.authService.login(user, res);
 
     if (token) {
-       res.redirect(`${process.env.FRONTEND_URL}/auth/success?token=${token}`);
+       res.redirect(`${process.env.FRONTEND_URL}/auth/social-google/success?token=${token}`);
        } else {
-       res.redirect(`${process.env.FRONTEND_URL}/auth/failure`);
+       res.redirect(`${process.env.FRONTEND_URL}/auth/social-google/failure`);
      }
   }
 
